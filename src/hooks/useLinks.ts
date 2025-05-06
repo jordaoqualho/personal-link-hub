@@ -30,7 +30,7 @@ export const useLinks = (userId?: string) => {
       ...linkData,
       id: crypto.randomUUID(),
       order: links.length,
-      userId: userId || "current-user", // In a real app, this would be the actual user ID
+      userId: userId || "current-user",
     };
 
     const updatedLinks = [...links, newLink];
