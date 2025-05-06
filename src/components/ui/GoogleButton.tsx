@@ -12,8 +12,6 @@ export function GoogleButton() {
       await signIn("google");
     } catch (error) {
       console.error("Error signing in:", error);
-    } finally {
-      setIsSigningIn(false);
     }
   };
 
