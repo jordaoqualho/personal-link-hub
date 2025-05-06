@@ -6,16 +6,22 @@ import "./globals.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
+  preload: true,
+  adjustFontFallback: true,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
+  preload: true,
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
   title: "LinkHub AI",
-  description: "A modern link hub'p;o  interface with AI assistant",
+  description: "A modern link hub interface with AI assistant",
   icons: {
     icon: "/favicon.ico",
   },
