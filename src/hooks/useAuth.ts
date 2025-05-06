@@ -6,6 +6,7 @@ export interface User {
   email: string;
   image: string;
   username?: string;
+  bio?: string;
 }
 
 export const useAuth = () => {
