@@ -1,10 +1,7 @@
 "use client";
 
-import { Header } from "@/components/layout/Header";
-import { UserAvatarIcon } from "@/components/ui/UserAvatarIcon";
 import { useLinks } from "@/hooks/useLinks";
 import { getThemeColors, getThemeGradient } from "@/lib/themes";
-import Link from "next/link";
 import { use, useEffect, useState } from "react";
 
 interface PublicUser {
