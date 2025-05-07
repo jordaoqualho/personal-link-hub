@@ -1,5 +1,5 @@
 import { getThemeById } from "@/lib/themes";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export function useTheme() {
   const [currentTheme, setCurrentTheme] = useState(() => {
