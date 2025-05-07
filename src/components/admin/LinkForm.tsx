@@ -1,5 +1,6 @@
 import { Link } from "@/hooks/useLinks";
 import { validateIconUrl, validateTitle, validateUrl } from "@/lib/validations";
+import Image from "next/image";
 import { FormEvent, useEffect, useState } from "react";
 
 interface LinkFormProps {
@@ -160,7 +161,7 @@ export const LinkForm = ({ onSubmit, initialData, onCancel, userId }: LinkFormPr
         {errors.icon && <p className="mt-1 text-sm text-red-500">{errors.icon}</p>}
         {iconPreview && (
           <div className="mt-2 flex items-center gap-2">
-            <img src={iconPreview} alt="Icon preview" className="w-6 h-6 object-contain rounded" />
+            <Image src={iconPreview} alt="Icon preview" width={24} height={24} className="object-contain rounded" />
             <span className="text-xs text-gray-400">Image preview</span>
           </div>
         )}

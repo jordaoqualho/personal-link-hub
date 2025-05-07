@@ -2,6 +2,7 @@
 
 import { useLinks } from "@/hooks/useLinks";
 import { getThemeColors, getThemeGradient } from "@/lib/themes";
+import Image from "next/image";
 import { use, useEffect, useState } from "react";
 
 interface PublicUser {
@@ -97,7 +98,13 @@ export default function PublicPage({ params }: { params: Promise<{ username: str
                 <div className="flex items-center relative">
                   {link.icon && (
                     <div className="absolute left-0">
-                      <img src={link.icon} alt={link.title} className="w-8 h-8 rounded flex-shrink-0" />
+                      <Image
+                        src={link.icon}
+                        alt={link.title}
+                        width={32}
+                        height={32}
+                        className="rounded flex-shrink-0"
+                      />
                     </div>
                   )}
                   <h3 className={`text-lg font-medium ${colors.textColor} w-full text-center`}>{link.title}</h3>
