@@ -1,59 +1,48 @@
-# 🌐 Personal Link Hub
+# 🌐 Personal Link Hub → LinkHub AI
 
-A minimal “link in bio” application built with **Next.js** and **TypeScript**, where users can manage and share curated links through a public profile page. Inspired by platforms like Linktree, this project focuses on simplicity, privacy, and customization.
+A minimal “link in bio” application built with **Next.js** and **TypeScript**, where users can manage and share curated links through a public profile page.
+
+Although the name includes “AI”, it actually stands for **Almost Intelligent**. The original idea was to use a real AI chatbot to onboard users and help personalize their LinkHub. However, due to time and cost constraints, I decided to implement a lightweight, almost-intelligent assistant that guides the user through creating their profile in a fun and simple way.
+
+🔗 **Live demo**: [personal-link-hub.vercel.app](https://personal-link-hub.vercel.app)
 
 ---
 
 ## ✨ Features
 
-- ✅ User authentication (NextAuth)
-- ✅ Public profile page (`/username`)
-- ✅ Link management: create, edit, delete
-- ✅ Optional link privacy (public/private toggle)
-- ✅ Link ordering (drag-and-drop)
-- ✅ Responsive and accessible UI
+- ✅ Google login via NextAuth
+- ✅ Alternative lightweight auth flow (email/name/username)
+- ✅ Public profile page at `/username`
+- ✅ Add, edit, delete links with icon preview
+- ✅ Optional link visibility (public/private)
+- ✅ Responsive design and theme switching
+- ✅ Friendly chatbot-like onboarding experience
 
 ---
 
 ## 📌 Scope Decisions & Trade-offs
 
-### Included:
-
-- Auth (email-based via NextAuth)
-- Link CRUD (with privacy flag)
-- Dynamic profile routing (`/username`)
-- Clean UI using TailwindCSS
-- Local DB via Prisma + SQLite
-
-### Not Included:
-
-- Analytics (out of scope for time constraints)
-- Advanced theming (basic dark/light support only)
-- OAuth login providers (used email to simplify)
-
-These decisions were made to deliver the core experience while keeping development within the 5–8 hour guideline.
+- I chose not to set up a database or backend to keep things simple and within the time limit. Instead, I simulated persistence using `localStorage` and cookies.  
+  👉 **Trade-off**: Public pages like `/username` aren’t truly persistent or shareable across devices.
+- I skipped analytics to avoid backend setup and keep the scope lean.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: Next.js 14, TypeScript, TailwindCSS, React Hook Form
-- **Backend**: Next.js API Routes, Prisma ORM, SQLite
-- **Auth**: NextAuth.js
-- **Hosting**: Vercel (production link below)
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: TailwindCSS
+- **Auth**: NextAuth.js (with Google OAuth)
+- **Hosting**: Vercel
 
 ---
 
 ## 🚀 Getting Started
 
 ```bash
-# 1. Clone the repo
 git clone https://github.com/your-username/personal-link-hub.git
 cd personal-link-hub
-
-# 2. Install dependencies
 npm install
-
-# 3. Generate DB & run dev server
 npm run start:dev
 ```
