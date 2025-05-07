@@ -43,7 +43,7 @@ export const LinkForm = ({ onSubmit, initialData, onCancel, userId }: LinkFormPr
     }
 
     try {
-      const img = new Image();
+      const img = new HTMLImageElement();
       await new Promise((resolve, reject) => {
         img.onload = () => {
           setIconPreview(iconUrl);
